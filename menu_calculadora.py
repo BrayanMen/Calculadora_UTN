@@ -41,11 +41,15 @@ def calculadora():
                         opcion = str(input("Elige una opcion: "))
                         limpiar_terminal()  
                         
-                        if opcion == 'g':
-                            opcion = None
+                        if opcion in ['a','b','c','d','e','f']:
                             break
                         else:
-                            print("Opción no válida, intenta de nuevo.")                 
+                            if opcion == 'g':
+                                opcion = None
+                                break
+                            else:
+                                print("Opción no válida, intenta de nuevo.")  
+                                
             case 4:
                 if opcion is None:
                     print("Primero seleccione una operación a realizar.")
@@ -71,17 +75,7 @@ def calculadora():
                             print(f"La secuencia de Fibonacci de {num_b} es: {fib(num_b)}")
                         case 'g':
                             break
-                        
-                    continuar = input("¿Deseas continuar operando? (s/n): ").lower()
-                    if continuar == 's':
-                        limpiar_terminal()
-                        break
-                    else:
-                        if continuar == 'n':
-                            limpiar_terminal()
-                            opcion = None
-                            break
-                        else:
+                        case _: 
                             print("Opción no válida, intenta de nuevo.")
             case 5:
                 print("Muchas gracias, hasta luego.")
