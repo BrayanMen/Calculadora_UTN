@@ -77,7 +77,9 @@ def calculadora():
                             break
                         case _: 
                             print("Opción no válida, intenta de nuevo.")
+                    input("Presiona Enter para continuar...")
             case 5:
+                limpiar_terminal()
                 print("Muchas gracias, hasta luego.")
                 break
     
