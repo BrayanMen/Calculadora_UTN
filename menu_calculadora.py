@@ -21,10 +21,16 @@ def calculadora():
         limpiar_terminal()    
             
         match(ingresar_opcion):
-            case 1:
-                num_a = int(input("Ingresar el primer operando: "))
+           case 1:
+                if num_a == None:
+                    num_a = int(input("Ingresar el primer operando: "))
+                else:
+                    num_a = int(input("Nuevo primer operando: "))
             case 2:
-                num_b = int(input("Ingresar el segundo operando: "))
+                if num_b == None:
+                    num_b = int(input("Ingresar el segundo operando: "))
+                else:
+                    num_b = int(input("Nuevo segundo operando: "))
             case 3:
                 if num_a == None or num_b == None:
                     print("Debes ingresas los Operandos.")
