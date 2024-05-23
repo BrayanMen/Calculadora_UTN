@@ -11,8 +11,8 @@ def calculadora():
     
     print("Bienvenido a la calculadora")
     while True:
-        print(f"[1] Ingresar 1er operando(A = {num_a})")
-        print(f"[2] Ingresar 2do operando(B = {num_b})")
+        print(f"[1] Ingresar 1er operando(A = {"x" if num_a == None else num_a})")
+        print(f"[2] Ingresar 2do operando(B = {"y" if num_b == None else num_b})")
         print("[3] Calcular operaciones")
         print("[4] Informar resultados")
         print("[5] Salir")
