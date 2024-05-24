@@ -89,3 +89,41 @@ def fib(num: int)-> int:
         b = a + b
     return b
 
+def menu(x:int, y:int):
+    print("[1] Ingresar 1er operando (A = x)" if x == None else f"[1] Su 1er operando es: (A = {x})")
+    print("[2] Ingresar 2do operando (B = y)" if y == None else f"[2] Su 2do operando es: (B = {y})")
+    print("[3] Calcular operaciones")
+    print("[4] Informar resultados")
+    print("[5] Salir")
+    
+def menu_operaciones():
+    print("Elige una opcion")
+    print("[a] Suma")
+    print("[b] Resta")
+    print("[c] Multiplicación")
+    print("[d] Division")
+    print("[e] Factorial")
+    print("[f] Secuencia Fibonacci")
+    print("[g] Volver al menú principal")
+    
+def prints_operaciones(opcion, x, y):
+    match opcion:
+        case 'a':
+            print(f"El resultado de {x} + {y} es: {suma(x, y)}")
+        case 'b':
+            print(f"El resultado de {x} - {y} es: {resta(x, y)}")
+        case 'c':
+            print(f"El resultado de {x} * {y} es: {multiplicacion(x, y)}")
+        case 'd':
+            if y == 0:
+                print("Error: División por cero no permitida.")
+            else:
+                print(f"El resultado de {x} / {y} es: {division(x, y)}")
+        case 'e':
+            print(f"El factorial de {x} es: {factorial(x)}")
+            print(f"El factorial de {y} es: {factorial(y)}")
+        case 'f':
+            print(f"La secuencia de Fibonacci de {x} es: {fib(x)}")
+            print(f"La secuencia de Fibonacci de {y} es: {fib(y)}")    
+        case _: 
+            print("Opción no válida, intenta de nuevo.")
