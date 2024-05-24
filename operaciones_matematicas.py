@@ -106,7 +106,7 @@ def menu_operaciones():
     print("[f] Secuencia Fibonacci")
     print("[g] Volver al menú principal")
     
-def prints_operaciones(opcion, x, y):
+def prints_operaciones(opcion, x:int, y:int):
     match opcion:
         case 'a':
             print(f"El resultado de {x} + {y} es: {suma(x, y)}")
